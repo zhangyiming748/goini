@@ -22,7 +22,7 @@ func TestAnother(t *testing.T) {
 	configPath := "/Users/zen/Github/goini/conf/conf.ini"
 	conf := SetConfig(configPath)
 	if ret, err := conf.GetValue("database", "username"); err != nil {
-		fmt.Println(err)
+		t.Fatal(err)
 	} else {
 		t.Log(ret)
 	}

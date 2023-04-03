@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"errors"
 	"fmt"
+	"golang.org/x/exp/slog"
 	"io"
 	"os"
 	"strings"
@@ -16,6 +17,7 @@ type Config struct {
 
 // Create an empty configuration file
 func SetConfig(filepath string) *Config {
+	slog.Debug("读取配置文件", slog.String("文件名", filepath))
 	c := new(Config)
 	c.filepath = filepath
 

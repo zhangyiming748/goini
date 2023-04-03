@@ -1,6 +1,15 @@
 goini
 ========
-
+# Quick Start
+```go
+	configPath := "/Users/zen/Github/goini/conf/conf.ini"
+	conf := SetConfig(configPath)
+	if ret, err := conf.GetValue("database", "username"); err != nil {
+		fmt.Println(err)
+	} else {
+		t.Log(ret)
+	}
+```
 **[The official website](https://zhangyiming748.github.io/)**
 ##描述
 
